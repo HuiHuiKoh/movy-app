@@ -13,7 +13,7 @@
     <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
       <h1>Learning Today,<br>Leading Tomorrow</h1>
       <h2>We are team of talented designers making websites with Bootstrap</h2>
-      <a href="{{asset ('courses') }}" class="btn-get-started">Get Started</a>
+      <a href="{{asset ('courses') }}" class="btn-get-started">Check Booking</a>
     </div>
   </section><!-- End Hero -->
 

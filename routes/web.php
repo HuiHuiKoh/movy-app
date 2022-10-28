@@ -29,24 +29,24 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::get('/courses', function () {
-    return view('courses');
+Route::get('/f&b', function () {
+    return view('f&b');
 });
 
 Route::get('/coursedetail', function () {
     return view('coursedetail');
 });
 
-Route::get('/events', function () {
-    return view('events');
+Route::get('/forum', function () {
+    return view('forum');
 });
 
-Route::get('/pricing', function () {
-    return view('pricing');
+Route::get('/showtimes', function () {
+    return view('showtimes');
 });
 
-Route::get('/trainers', function () {
-    return view('trainers');
+Route::get('/membership', function () {
+    return view('membership');
 });
 
 Auth::routes();

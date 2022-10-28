@@ -147,6 +147,7 @@ h6 {
 
 #header .logo a {
   color: #EFDDB8;
+  text-decoration: none;
 }
 
 #header .logo img {
@@ -158,14 +159,15 @@ h6 {
 */
 .get-started-btn {
   margin-left: 22px;
-  background: #EFDDB8;
-  color: #fff;
+  background: #fff;
+  color: #000000;
   border-radius: 50px;
   padding: 8px 25px;
   white-space: nowrap;
   transition: 0.3s;
   font-size: 14px;
   display: inline-block;
+  text-decoration: none;
 }
 
 .get-started-btn:hover {
@@ -214,6 +216,7 @@ h6 {
   color: #fff;
   white-space: nowrap;
   transition: 0.3s;
+  text-decoration: none;
 }
 
 .navbar a i,
@@ -240,7 +243,7 @@ h6 {
   z-index: 99;
   opacity: 0;
   visibility: hidden;
-  background: #fff;
+  background: #000;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
   transition: 0.3s;
   border-radius: 4px;
@@ -469,6 +472,10 @@ h6 {
 #hero .btn-get-started:hover {
   background: #EFDDB8;
   border: 2px solid #EFDDB8;
+}
+
+#hero a{
+  text-decoration: none;
 }
 
 @media (min-width: 1024px) {
