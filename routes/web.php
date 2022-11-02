@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\ForumController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MembershipController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -19,15 +22,17 @@ use Illuminate\Support\Facades\Route;
 //     return view('home');
 // });
 
-Route::get('membership', 'App\Http\Controllers\HomeController@membership');
+Route::get('home', [HomeController::class, 'index']);
+Route::get('membership', [MembershipController::class, 'membership']);
+Route::get('forum', [ForumController::class, 'forum']);
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
-Route::get('/home', function () {
-    return view('home');
-});
+//Route::get('/home', function () {
+//    return view('home');
+//});
 
 Route::get('/about', function () {
     return view('about');
@@ -41,19 +46,9 @@ Route::get('/f&b', function () {
     return view('f&b');
 });
 
-Route::get('/coursedetail', function () {
-    return view('coursedetail');
-});
-
-Route::get('/forum', function () {
-    return view('forum');
-});
-
 Route::get('/showtimes', function () {
     return view('showtimes');
 });
-
-
 
 Auth::routes();
 

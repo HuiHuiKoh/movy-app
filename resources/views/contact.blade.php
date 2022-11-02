@@ -1,4 +1,4 @@
-@extends('layouts.app', ['pageTitle'=>'Contact Us'])
+@extends('layouts.app', ['pageTitle'=>'Contact Us'], ['title'=>'Contact Us'])
 @push('css')
 <style>
 
@@ -6,14 +6,6 @@
 @endpush
 
 @section('content')
-    <!-- ======= Breadcrumbs ======= -->
-    <div class="breadcrumbs" data-aos="fade-in">
-      <div class="container">
-        <h2>Contact Us</h2>
-        <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
-      </div>
-    </div><!-- End Breadcrumbs -->
-
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
       <div data-aos="fade-up">

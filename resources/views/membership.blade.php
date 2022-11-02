@@ -1,4 +1,4 @@
-@extends('layouts.app', ['pageTitle'=>'Membership'])
+@extends('layouts.app', ['pageTitle'=>'Membership'], ['title'=>'Membership'])
 @push('css')
 <style>
 
@@ -6,14 +6,6 @@
 @endpush
 
 @section('content')
-    <!-- ======= Breadcrumbs ======= -->
-    <div class="breadcrumbs">
-      <div class="container">
-        <h2>Trainers</h2>
-        <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
-      </div>
-    </div><!-- End Breadcrumbs -->
-
     <!-- ======= Trainers Section ======= -->
     <section id="trainers" class="trainers">
       <div class="container" data-aos="fade-up">

@@ -1,4 +1,4 @@
-@extends('layouts.app', ['pageTitle'=>'F&B'])
+@extends('layouts.app', ['pageTitle'=>'F&B'], ['title'=>'Food & Beverages'])
 @push('css')
 <style>
 
@@ -6,14 +6,6 @@
 @endpush
 
 @section('content')
-    <!-- ======= Breadcrumbs ======= -->
-    <div class="breadcrumbs">
-      <div class="container">
-        <h2>Courses</h2>
-        <p>Est dolorum ut non facere possimus quibusdam eligendi voluptatem. Quia id aut similique quia voluptas sit quaerat debitis. Rerum omnis ipsam aperiam consequatur laboriosam nemo harum praesentium. </p>
-      </div>
-    </div><!-- End Breadcrumbs -->
-
     <!-- ======= Courses Section ======= -->
     <section id="courses" class="courses">
       <div class="container" data-aos="fade-up">
@@ -29,7 +21,7 @@
                   <p class="price">$169</p>
                 </div>
 
-                <h3><a href="{{asset ('coursedetail') }}">Website Design</a></h3>
+                <h3><a href="">Website Design</a></h3>
                 <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
                 <div class="trainer d-flex justify-content-between align-items-center">
                   <div class="trainer-profile d-flex align-items-center">
@@ -55,7 +47,7 @@
                   <p class="price">$250</p>
                 </div>
 
-                <h3><a href="{{asset ('coursedetail') }}">Search Engine Optimization</a></h3>
+                <h3><a href="">Search Engine Optimization</a></h3>
                 <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
                 <div class="trainer d-flex justify-content-between align-items-center">
                   <div class="trainer-profile d-flex align-items-center">
@@ -81,7 +73,7 @@
                   <p class="price">$180</p>
                 </div>
 
-                <h3><a href="{{asset ('coursedetail') }}">Copywriting</a></h3>
+                <h3><a href="">Copywriting</a></h3>
                 <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
                 <div class="trainer d-flex justify-content-between align-items-center">
                   <div class="trainer-profile d-flex align-items-center">

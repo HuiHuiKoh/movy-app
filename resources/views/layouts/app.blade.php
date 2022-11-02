@@ -82,6 +82,16 @@
         </header><!-- End Header -->
 
         <main id="main">
+            <!--@if(Request::path() == Request::path())-->
+            <!-- ======= Breadcrumbs ======= -->
+            <div class="breadcrumbs" data-aos="fade-in">
+                <div class="container">
+                    <h2>{{ $title ?? '' }}</h2>
+                </div>
+            </div>
+            <!-- End Breadcrumbs -->
+            <!--@endif-->
+
             @yield('content')
         </main>
 
