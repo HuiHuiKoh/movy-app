@@ -19,8 +19,13 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function welcome()
+    public function index()
     {
-        return view('movyhome');
+        return view('membership');
+    }
+
+    public function membership()
+    {
+        return view('membership');
     }
 }

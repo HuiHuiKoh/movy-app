@@ -15,16 +15,18 @@ use Illuminate\Support\Facades\Route;
  */
 //Route::get('home', 'HomeController@welcome')->name('home');
 
-Route::get('/home', function () {
-    return view('home');
-});
+// Route::get('/home', function () {
+//     return view('home');
+// });
+
+Route::get('membership', 'App\Http\Controllers\HomeController@membership');
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/membership', function () {
-    return view('membership');
+Route::get('/home', function () {
+    return view('home');
 });
 
 Route::get('/about', function () {
@@ -55,4 +57,3 @@ Route::get('/showtimes', function () {
 
 Auth::routes();
 
-// Route::get('login', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
