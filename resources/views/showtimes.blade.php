@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app', ['pageTitle'=>'Showtimes'])
+@push('css')
+<style>
 
-<head>
-    <title>Pricing</title>
-    @include('includes.header')
-</head>
+</style>
+@endpush
 
-<body>
-
-@include('includes.navbar')
-
-  <main id="main">
+@section('content')
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs" data-aos="fade-in">
       <div class="container">
@@ -98,11 +93,4 @@
 
       </div>
     </section><!-- End Pricing Section -->
-
-  </main><!-- End #main -->
-
-  @include('includes.footer')
-
-</body>
-
-</html>
+@endsection

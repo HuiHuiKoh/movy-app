@@ -1,80 +1,179 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html lang="en">
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <head>
+        <title>{{ $pageTitle ?? '' }}</title>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+        <!-- Favicons -->
+        <link href="{{asset ('import/assets/img/favicon.png') }}" rel="icon">
+        <link href="{{asset ('import/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
-    <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-</head>
-<body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
+        <!-- Vendor CSS Files -->
+        <link href="{{asset ('import/assets/vendor/animate.css/animate.min.css') }}" rel="stylesheet">
+        <link href="{{asset ('import/assets/vendor/aos/aos.css') }}" rel="stylesheet">
+        <link href="{{asset ('import/assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+        <link href="{{asset ('import/assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+        <link href="{{asset ('import/assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+        <link href="{{asset ('import/assets/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
+        <link href="{{asset ('import/assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
+        <!-- Template Main CSS File -->
+        <link href="{{asset ('import/assets/css/style.css') }}" rel="stylesheet">
+
+        <!-- =======================================================
+        * Template Name: Mentor - v4.9.1
+        * Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
+        * Author: BootstrapMade.com
+        * License: https://bootstrapmade.com/license/
+        ======================================================== -->
+    </head>
+
+    <body>
+        <!-- ======= Header ======= -->
+        <header id="header" class="fixed-top">
+            <div class="container d-flex align-items-center">
+
+                <h1 class="logo me-auto"><a href="index.html">MOVY</a></h1>
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <!-- <a href="index.html" class="logo me-auto"><img src="{{asset ('import/assets/img/logo.png') }}" alt="" class="img-fluid"></a>-->
+
+                <nav id="navbar" class="navbar order-last order-lg-0">
+                    <ul>
+                        <li><a href="{{asset ('home') }}">Home</a></li>
+                        <li><a href="{{asset ('showtimes') }}">Showtimes</a></li>
+                        <li><a href="{{asset ('f&b') }}">F & B</a></li>
+                        <li><a href="{{asset ('membership') }}">Membership</a></li>
+                        <li><a href="{{asset ('forum') }}">Forum</a></li>
+                        <li><a href="{{asset ('about') }}">About</a></li>
+
+          <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li> -->
+                        <li><a href="{{asset ('contact') }}">Contact</a></li>
                     </ul>
+                    <i class="bi bi-list mobile-nav-toggle"></i>
+                </nav><!-- .navbar -->
 
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
+                <a href="{{asset ('courses') }}" class="get-started-btn">Login</a>
 
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
             </div>
-        </nav>
+        </header><!-- End Header -->
 
-        <main class="py-4">
+        <main id="main">
             @yield('content')
         </main>
-    </div>
-</body>
+
+        <!-- ======= Footer ======= -->
+        <footer id="footer">
+
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-3 col-md-6 footer-contact">
+                            <h3>Mentor</h3>
+                            <p>
+                                A108 Adam Street <br>
+                                New York, NY 535022<br>
+                                United States <br><br>
+                                <strong>Phone:</strong> +1 5589 55488 55<br>
+                                <strong>Email:</strong> info@example.com<br>
+                            </p>
+                        </div>
+
+                        <div class="col-lg-2 col-md-6 footer-links">
+                            <h4>Useful Links</h4>
+                            <ul>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 footer-links">
+                            <h4>Our Services</h4>
+                            <ul>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 footer-newsletter">
+                            <h4>Join Our Newsletter</h4>
+                            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+                            <form action="" method="post">
+                                <input type="email" name="email"><input type="submit" value="Subscribe">
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="container d-md-flex py-4">
+
+                <!-- <div class="me-md-auto text-center text-md-start">
+                  <div class="copyright">
+                    &copy; Copyright <strong><span>Mentor</span></strong>. All Rights Reserved
+                  </div> -->
+                <!-- <div class="credits"> -->
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/ -->
+                <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+                <!-- </div> -->
+                <!-- </div> -->
+                <div class="social-links text-center text-md-right pt-3 pt-md-0">
+                    <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                    <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                    <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                    <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                </div>
+            </div>
+        </footer><!-- End Footer -->
+
+        <div id="preloader"></div>
+        <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+        <!-- Vendor JS Files -->
+        <script src="{{asset ('import/assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
+        <script src="{{asset ('import/assets/vendor/aos/aos.js') }}"></script>
+        <script src="{{asset ('import/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{asset ('import/assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+        <script src="{{asset ('import/assets/vendor/php-email-form/validate.js') }}"></script>
+
+        <!-- Template Main JS File -->
+        <script src="{{asset ('import/assets/js/main.js') }}"></script>
+
+    </body>
+
 </html>

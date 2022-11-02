@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app', ['pageTitle'=>'About Us'])
+@push('css')
+<style>
 
-<head>
-    <title>About Movy</title>
-    @include('includes.header')
-</head>
+</style>
+@endpush
 
-<body>
-
-@include('includes.navbar')
-
-  <main id="main">
+@section('content')
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs" data-aos="fade-in">
       <div class="container">
@@ -172,11 +167,4 @@
 
       </div>
     </section><!-- End Testimonials Section -->
-
-  </main><!-- End #main -->
-
-  @include('includes.footer')
-
-</body>
-
-</html>
+@endsection

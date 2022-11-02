@@ -1,17 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app', ['pageTitle'=>'Membership'])
+@push('css')
+<style>
 
-<head>
-    <title>About Movy</title>
-    @include('includes.header')
-</head>
+</style>
+@endpush
 
-<body>
-    
-@include('includes.navbar')
-
-  <main id="main" data-aos="fade-in">
-
+@section('content')
     <!-- ======= Breadcrumbs ======= -->
     <div class="breadcrumbs">
       <div class="container">
@@ -123,8 +117,4 @@
 
       </div>
     </section><!-- End Events Section -->
-
-  @include('includes.footer')
-</body>
-
-</html>
+@endsection
