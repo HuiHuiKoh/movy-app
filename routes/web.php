@@ -16,23 +16,10 @@ use Illuminate\Support\Facades\Route;
   | contains the "web" middleware group. Now create something great!
   |
  */
-//Route::get('home', 'HomeController@welcome')->name('home');
-
-// Route::get('/home', function () {
-//     return view('home');
-// });
 
 Route::get('home', [HomeController::class, 'index']);
 Route::get('membership', [MembershipController::class, 'membership']);
 Route::get('forum', [ForumController::class, 'forum']);
-
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-
-//Route::get('/home', function () {
-//    return view('home');
-//});
 
 Route::get('/about', function () {
     return view('about');

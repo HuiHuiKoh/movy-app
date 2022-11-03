@@ -27,13 +27,6 @@
 
         <!-- Template Main CSS File -->
         <link href="{{asset ('import/assets/css/style.css') }}" rel="stylesheet">
-
-        <!-- =======================================================
-        * Template Name: Mentor - v4.9.1
-        * Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
-        * Author: BootstrapMade.com
-        * License: https://bootstrapmade.com/license/
-        ======================================================== -->
     </head>
 
     <body>
@@ -41,7 +34,7 @@
         <header id="header" class="fixed-top">
             <div class="container d-flex align-items-center">
 
-                <h1 class="logo me-auto"><a href="index.html">MOVY</a></h1>
+                <h1 class="logo me-auto"><a href="{{ asset('home') }}">MOVY</a></h1>
                 <!-- Uncomment below if you prefer to use an image logo -->
                 <!-- <a href="index.html" class="logo me-auto"><img src="{{asset ('import/assets/img/logo.png') }}" alt="" class="img-fluid"></a>-->
 
@@ -76,13 +69,13 @@
                     <i class="bi bi-list mobile-nav-toggle"></i>
                 </nav><!-- .navbar -->
 
-                <a href="{{asset ('courses') }}" class="get-started-btn">Login</a>
+                <a href="" class="get-started-btn">Login</a>
 
             </div>
         </header><!-- End Header -->
 
         <main id="main">
-            <!--@if(Request::path() == Request::path())-->
+            @if(!Request::is('home'))
             <!-- ======= Breadcrumbs ======= -->
             <div class="breadcrumbs" data-aos="fade-in">
                 <div class="container">
@@ -90,7 +83,7 @@
                 </div>
             </div>
             <!-- End Breadcrumbs -->
-            <!--@endif-->
+            @endif
 
             @yield('content')
         </main>
@@ -103,64 +96,50 @@
                     <div class="row">
 
                         <div class="col-lg-3 col-md-6 footer-contact">
-                            <h3>Mentor</h3>
-                            <p>
+                            <h3>MOVY</h3>
+<!--                            <p>
                                 A108 Adam Street <br>
                                 New York, NY 535022<br>
                                 United States <br><br>
                                 <strong>Phone:</strong> +1 5589 55488 55<br>
                                 <strong>Email:</strong> info@example.com<br>
-                            </p>
+                            </p>-->
                         </div>
 
                         <div class="col-lg-2 col-md-6 footer-links">
-                            <h4>Useful Links</h4>
+                            <h4>Site Links</h4>
                             <ul>
-                                <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                                <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-                                <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-                                <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-                                <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="{{ asset('home') }}">Home</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="{{ asset('about') }}">About us</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="{{ asset('showtimes') }}">Showtimes</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="{{ asset('f&b') }}">Food & Beverages</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="{{ asset('forum') }}">Forum</a></li>
                             </ul>
                         </div>
 
                         <div class="col-lg-3 col-md-6 footer-links">
-                            <h4>Our Services</h4>
+                            <h4>Join Us Now</h4>
                             <ul>
-                                <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-                                <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-                                <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-                                <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-                                <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="{{ asset('membership') }}">Member privileges</a></li>
                             </ul>
                         </div>
 
                         <div class="col-lg-4 col-md-6 footer-newsletter">
-                            <h4>Join Our Newsletter</h4>
-                            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+                            <h4>Newsletter</h4>
+                            <!--<p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>-->
                             <form action="" method="post">
-                                <input type="email" name="email"><input type="submit" value="Subscribe">
+                                <input type="email" name="email"><input type="submit" value="Subscribe Now">
                             </form>
                         </div>
 
                     </div>
                 </div>
             </div>
+            
+            <hr />
 
             <div class="container d-md-flex py-4">
 
-                <!-- <div class="me-md-auto text-center text-md-start">
-                  <div class="copyright">
-                    &copy; Copyright <strong><span>Mentor</span></strong>. All Rights Reserved
-                  </div> -->
-                <!-- <div class="credits"> -->
-                <!-- All the links in the footer should remain intact. -->
-                <!-- You can delete the links only if you purchased the pro version. -->
-                <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/ -->
-                <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
-                <!-- </div> -->
-                <!-- </div> -->
                 <div class="social-links text-center text-md-right pt-3 pt-md-0">
                     <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
                     <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
