@@ -74,7 +74,7 @@
     </div>
 </div>
 <div>
-    <a href="" class="btn-get-started">Check Booking</a>
+    <a href="" class="btn-get-started ms-5 mt-5">Check Booking</a>
 </div>
 <!-- ======= Pricing Section ======= -->
 <section id="showtimes" class="pricing">
